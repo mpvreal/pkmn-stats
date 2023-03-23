@@ -1,30 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a937c3a7-1af7-4ed3-9ff7-da510a5bbf13" name="Changes" comment="datasets">
-      <change beforePath="$PROJECT_DIR$/CSVs/pokemon.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSVs/testes.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSVs/treino.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Activate.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/activate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/activate.csh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/activate.fish" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/f2py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/f2py3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/f2py3.10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/fonttools" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/pip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/pip3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/pip3.10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/pyftmerge" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/pyftsubset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/python" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/python3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/python3.10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ttx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib64" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyvenv.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/share/man/man1/ttx.1" beforeDir="false" />
+    <list default="true" id="a937c3a7-1af7-4ed3-9ff7-da510a5bbf13" name="Changes" comment="felipeda">
+      <change beforePath="$PROJECT_DIR$/Predicao/CSVs/treino.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Predicao/CSVs/treino.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +73,7 @@
       <workItem from="1679533105080" duration="526000" />
       <workItem from="1679533661499" duration="150000" />
       <workItem from="1679534175048" duration="66000" />
-      <workItem from="1679534578311" duration="297000" />
+      <workItem from="1679534578311" duration="733000" />
     </task>
     <task id="LOCAL-00001" summary="datasets">
       <created>1679533274096</created>
@@ -111,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679533506242</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="felipeda">
+      <created>1679534899285</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679534899285</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +115,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="datasets" />
-    <option name="LAST_COMMIT_MESSAGE" value="datasets" />
+    <MESSAGE value="felipeda" />
+    <option name="LAST_COMMIT_MESSAGE" value="felipeda" />
   </component>
 </project>
