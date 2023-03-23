@@ -1,5 +1,6 @@
 from matplotlib import pyplot as plt
 from sklearn.cluster import KMeans
+from yellowbrick.cluster import KElbowVisualizer
 
 import pandas as pd
 
@@ -18,9 +19,13 @@ if __name__ == '__main__':
         kmeans.fit(x)
         inertias.append(kmeans.inertia_)
 
-    fig = plt.figure(figsize=(10, 8))
-    plt.plot(range(2, 10), inertias, '-o')
-    plt.xlabel('Number of Clusters (k)')
+    elbowv = KElbowVisualizer(kmeans, k=(2, 10))
+    elbowv.fit(x)
+
+    plt.plot(range(2, 10), inertias, marker='o')
+    plt.xlabel('Number of clusters')
     plt.ylabel('Inertia')
-    plt.xticks(range(2, 10))
-    fig.savefig("kmeans.png")
+    plt.savefig('elbow.png')
+
+
+
