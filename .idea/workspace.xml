@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a937c3a7-1af7-4ed3-9ff7-da510a5bbf13" name="Changes" comment="knn feito">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pkmn-stats.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pkmn-stats.iml" afterDir="false" />
+    <list default="true" id="a937c3a7-1af7-4ed3-9ff7-da510a5bbf13" name="Changes" comment="melhor apresentação da decision tree">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Predicao/CSVs/pokemon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Predicao/CSVs/pokemon.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Predicao/CSVs/testes.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Predicao/CSVs/treino.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Predicao/Decision-Tree/decision_tree.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Predicao/Decision-Tree/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Predicao/Decision-Tree/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Predicao/K-Means/elbow.png" beforeDir="false" afterPath="$PROJECT_DIR$/Predicao/K-Means/elbow.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -214,7 +209,7 @@
       <workItem from="1679534578311" duration="3352000" />
       <workItem from="1679576489504" duration="1066000" />
       <workItem from="1679761171519" duration="126000" />
-      <workItem from="1679761419458" duration="4307000" />
+      <workItem from="1679761419458" duration="10482000" />
     </task>
     <task id="LOCAL-00001" summary="datasets">
       <created>1679533274096</created>
@@ -265,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679537788996</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="melhor apresentação da decision tree">
+      <created>1679765826420</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679765826420</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,10 +289,11 @@
     <MESSAGE value="felipeda" />
     <MESSAGE value="datasets com as informaçoes inuteis removidas" />
     <MESSAGE value="knn feito" />
-    <option name="LAST_COMMIT_MESSAGE" value="knn feito" />
+    <MESSAGE value="melhor apresentação da decision tree" />
+    <option name="LAST_COMMIT_MESSAGE" value="melhor apresentação da decision tree" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pkmn_stats$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1679765773505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Predicao/Decision-Tree" />
+    <SUITE FILE_PATH="coverage/pkmn_stats$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1679771989579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Predicao/Decision-Tree" />
     <SUITE FILE_PATH="coverage/pkmn_stats$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1679537150997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Predicao/Cluster" />
     <SUITE FILE_PATH="coverage/pkmn_stats$main__4_.coverage" NAME="main (4) Coverage Results" MODIFIED="1679577466141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Predicao/K-Means" />
     <SUITE FILE_PATH="coverage/pkmn_stats$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1679537633273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Predicao/KNN" />
