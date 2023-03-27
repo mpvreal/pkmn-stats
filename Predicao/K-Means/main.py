@@ -1,4 +1,3 @@
-from matplotlib import pyplot as plt
 from sklearn.cluster import KMeans
 from yellowbrick.cluster import KElbowVisualizer
 
@@ -10,22 +9,16 @@ if __name__ == '__main__':
     data_pandas = pd.read_csv(CSV_FULL_PATH)
     df = pd.DataFrame(data_pandas)
 
-    x = df.drop(['is_legendary'], axis=1)
-    y = df['is_legendary']
+    x = df.drop(['attack', 'defense', 'sp_attack', 'sp_defense', 'is_legendary', 'name'], axis=1)
 
-    inertias = []
-    for k in range(2, 10):
-        kmeans = KMeans(n_clusters=k, n_init=10)
-        kmeans.fit(x)
-        inertias.append(kmeans.inertia_)
-
-    elbowv = KElbowVisualizer(kmeans, k=(2, 10))
+    kmeans = KMeans(n_init=10)
+    elbowv = KElbowVisualizer(kmeans, k=(2, 11))
     elbowv.fit(x)
+    elbowv.show(outpath="elbow.png")
 
-    plt.plot(range(2, 10), inertias, marker='o')
-    plt.xlabel('Number of clusters')
-    plt.ylabel('Inertia')
-    plt.savefig('elbow.png')
+    best_k = elbowv.elbow_value_
+    bestk_kmeans = KMeans(n_clusters=best_k, n_init=10)
+    bestk_kmeans.fit(x)
 
-
-
+    df['cluster'] = bestk_kmeans.labels_
+    df.to_csv('pokemon_clustered.csv', index=False)
