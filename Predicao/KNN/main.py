@@ -1,7 +1,9 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+from mlxtend.plotting import plot_confusion_matrix
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix
 
 CSV_FULL_PATH = '../CSVs/pokemon.csv'
 
@@ -34,3 +36,20 @@ if __name__ == '__main__':
     plt.legend()
     fig.savefig("knn_compare_model.png")
 
+    best_n = test_accuracy.index(max(test_accuracy)) + 1
+    best_model = KNeighborsClassifier(n_neighbors=best_n)
+    best_model.fit(x_train, y_train)
+    df['prediction'] = best_model.predict(x)
+    df.to_csv('pokemon_predictions.csv', index=False)
+    y_pred = best_model.predict(x_test)
+
+    cm = confusion_matrix(y_test, y_pred)
+    fig, ax = plot_confusion_matrix(conf_mat=confusion_matrix(y_test, y_pred), figsize=(6, 6), cmap=plt.cm.Greens)
+    ax.xaxis.set(ticks=(0, 1), ticklabels=('Predicted 0s', 'Predicted 1s'))
+    ax.yaxis.set(ticks=(0, 1), ticklabels=('Actual 0s', 'Actual 1s'))
+    plt.xlabel('Predictions', fontsize=18)
+    plt.ylabel('Actuals', fontsize=18)
+    for t in ax.texts:
+        t.set_color('red')
+    plt.savefig('confusion_matrix.png')
+    plt.clf()
