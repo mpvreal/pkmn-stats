@@ -51,7 +51,7 @@ if __name__ == '__main__':
     plt.ylabel('Actuals', fontsize=18)
     for t in ax.texts:
         t.set_color('red')
-    plt.savefig('confusion_matrix.png')
+    plt.savefig('confusion_matrix_dt.png')
     plt.clf()
 
     fig = plt.figure(figsize=(25, 20))

@@ -1,8 +1,8 @@
 Pokemon,Predicted,Actual
-Cresselia,Legendary,Legendary
-Shaymin,Legendary,Legendary
 Raikou,Legendary,Legendary
+Tornadus,Legendary,Legendary
 Zygarde,Legendary,Legendary
+Landorus,Legendary,Legendary
 Lugia,Legendary,Legendary
 Hoopa,Legendary,Legendary
 Mesprit,Legendary,Legendary
@@ -15,10 +15,6 @@ Terrakion,Legendary,Legendary
 Guzzlord,Legendary,Legendary
 Dialga,Legendary,Legendary
 Cosmog,Not Legendary,Legendary
+Cresselia,Not Legendary,Legendary
+Shaymin,Not Legendary,Legendary
 Deoxys,Not Legendary,Legendary
-Tornadus,Not Legendary,Legendary
-Landorus,Not Legendary,Legendary
-Salamence,Legendary,Not Legendary
-Metagross,Legendary,Not Legendary
-Glalie,Legendary,Not Legendary
-Kangaskhan,Legendary,Not Legendary
