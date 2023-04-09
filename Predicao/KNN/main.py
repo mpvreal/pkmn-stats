@@ -3,7 +3,7 @@ import pandas as pd
 from mlxtend.plotting import plot_confusion_matrix
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, accuracy_score
 
 CSV_FULL_PATH = '../CSVs/pokemon.csv'
 
@@ -42,6 +42,8 @@ if __name__ == '__main__':
     df['prediction'] = best_model.predict(x)
     df.to_csv('pokemon_predictions.csv', index=False)
     y_pred = best_model.predict(x_test)
+
+    print('Accuracy: {}%'.format(accuracy_score(y_test, y_pred) * 100))
 
     cm = confusion_matrix(y_test, y_pred)
     fig, ax = plot_confusion_matrix(conf_mat=confusion_matrix(y_test, y_pred), figsize=(6, 6), cmap=plt.cm.Greens)
