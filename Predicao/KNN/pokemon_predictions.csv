@@ -1,4 +1,7 @@
 Pokemon,Predicted,Actual
+Cresselia,Legendary,Legendary
+Shaymin,Legendary,Legendary
+Deoxys,Legendary,Legendary
 Raikou,Legendary,Legendary
 Tornadus,Legendary,Legendary
 Zygarde,Legendary,Legendary
@@ -12,9 +15,8 @@ Uxie,Legendary,Legendary
 Reshiram,Legendary,Legendary
 Palkia,Legendary,Legendary
 Terrakion,Legendary,Legendary
-Guzzlord,Legendary,Legendary
 Dialga,Legendary,Legendary
 Cosmog,Not Legendary,Legendary
-Cresselia,Not Legendary,Legendary
-Shaymin,Not Legendary,Legendary
-Deoxys,Not Legendary,Legendary
+Guzzlord,Not Legendary,Legendary
+Salamence,Legendary,Not Legendary
+Metagross,Legendary,Not Legendary
