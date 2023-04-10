@@ -39,10 +39,7 @@ if __name__ == '__main__':
     best_n = test_accuracy.index(max(test_accuracy)) + 1
     best_model = KNeighborsClassifier(n_neighbors=best_n)
     best_model.fit(x_train, y_train)
-    df['prediction'] = best_model.predict(x)
-    df.to_csv('pokemon_predictions.csv', index=False)
     y_pred = best_model.predict(x_test)
-
     print('Accuracy: {}%'.format(accuracy_score(y_test, y_pred) * 100))
 
     cm = confusion_matrix(y_test, y_pred)
@@ -55,3 +52,20 @@ if __name__ == '__main__':
         t.set_color('red')
     plt.savefig('confusion_matrix.png')
     plt.clf()
+
+    leg_pred_as_leg = []
+    leg_pred_as_not_leg = []
+    not_leg_pred_as_leg = []
+    for i in range(len(y_pred)):
+        if y_pred[i] == 1 and y_test.iloc[i] == 1:
+            leg_pred_as_leg.append(df.loc[x_test.index[i], 'name'])
+        elif y_pred[i] == 0 and y_test.iloc[i] == 1:
+            leg_pred_as_not_leg.append(df.loc[x_test.index[i], 'name'])
+        elif y_pred[i] == 1 and y_test.iloc[i] == 0:
+            not_leg_pred_as_leg.append(df.loc[x_test.index[i], 'name'])
+    leg_df = pd.DataFrame({'Pokemon': leg_pred_as_leg, 'Predicted': 'Legendary', 'Actual': 'Legendary'})
+    not_leg_df = pd.DataFrame({'Pokemon': leg_pred_as_not_leg, 'Predicted': 'Not Legendary', 'Actual': 'Legendary'})
+    not_leg_pred_as_leg_df = pd.DataFrame(
+        {'Pokemon': not_leg_pred_as_leg, 'Predicted': 'Legendary', 'Actual': 'Not Legendary'})
+    df = pd.concat([leg_df, not_leg_df, not_leg_pred_as_leg_df])
+    df.to_csv('pokemon_predictions.csv', index=False)

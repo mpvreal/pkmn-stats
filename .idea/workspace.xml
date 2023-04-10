@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a937c3a7-1af7-4ed3-9ff7-da510a5bbf13" name="Changes" comment="alteraçoes no k-means e o notebook está feito">
+    <list default="true" id="a937c3a7-1af7-4ed3-9ff7-da510a5bbf13" name="Changes" comment="knn">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Predicao/KNN/confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/Predicao/KNN/confusion_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Predicao/KNN/knn_compare_model.png" beforeDir="false" afterPath="$PROJECT_DIR$/Predicao/KNN/knn_compare_model.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Predicao/CSVs/pokemon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Predicao/CSVs/pokemon.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Predicao/KNN/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Predicao/KNN/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Predicao/KNN/pokemon_predictions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Predicao/KNN/pokemon_predictions.csv" afterDir="false" />
     </list>
@@ -220,7 +219,8 @@
       <workItem from="1680909372532" duration="3139000" />
       <workItem from="1681062004266" duration="2426000" />
       <workItem from="1681074268279" duration="506000" />
-      <workItem from="1681077235860" duration="641000" />
+      <workItem from="1681077235860" duration="710000" />
+      <workItem from="1681085648102" duration="833000" />
     </task>
     <task id="LOCAL-00001" summary="datasets">
       <created>1679533274096</created>
@@ -313,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681064674667</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="knn">
+      <created>1681077946147</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681077946147</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,12 +346,13 @@
     <MESSAGE value="notebook de decision tree" />
     <MESSAGE value="notebook KNN" />
     <MESSAGE value="alteraçoes no k-means e o notebook está feito" />
-    <option name="LAST_COMMIT_MESSAGE" value="alteraçoes no k-means e o notebook está feito" />
+    <MESSAGE value="knn" />
+    <option name="LAST_COMMIT_MESSAGE" value="knn" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pkmn_stats$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1681077264801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Predicao/Decision-Tree" />
     <SUITE FILE_PATH="coverage/pkmn_stats$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1679537150997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Predicao/Cluster" />
     <SUITE FILE_PATH="coverage/pkmn_stats$main__4_.coverage" NAME="main (4) Coverage Results" MODIFIED="1680909567949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Predicao/K-Means" />
-    <SUITE FILE_PATH="coverage/pkmn_stats$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1681077871595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Predicao/KNN" />
+    <SUITE FILE_PATH="coverage/pkmn_stats$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1681086465858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Predicao/KNN" />
   </component>
 </project>
