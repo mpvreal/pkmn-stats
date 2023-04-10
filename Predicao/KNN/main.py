@@ -53,6 +53,13 @@ if __name__ == '__main__':
     plt.savefig('confusion_matrix.png')
     plt.clf()
 
+    # Para duas variaveis
+    # fig = plt.figure(figsize=(10, 5))
+    # plt.scatter(df['hp'], df['base_total'], c=df['is_legendary'])
+    # plt.xlabel('HP')
+    # plt.ylabel('Total')
+    # plt.savefig('scatter_plot.png')
+
     leg_pred_as_leg = []
     leg_pred_as_not_leg = []
     not_leg_pred_as_leg = []
