@@ -22,3 +22,5 @@ if __name__ == '__main__':
 
     df['cluster'] = bestk_kmeans.labels_
     df.to_csv('pokemon_clustered.csv', index=False)
+
+    print(df['cluster'].value_counts(normalize=True))
