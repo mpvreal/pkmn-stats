@@ -42,6 +42,14 @@ if __name__ == '__main__':
 
     y_pred = model.predict(x_test)
     print('Accuracy: {}%'.format(accuracy_score(y_test, y_pred) * 100))
+    recall = confusion_matrix(y_test, y_pred)[1][1] / (
+                confusion_matrix(y_test, y_pred)[1][1] + confusion_matrix(y_test, y_pred)[1][0])
+    f1 = 2 * (recall * accuracy_score(y_test, y_pred)) / (recall + accuracy_score(y_test, y_pred))
+    precision = confusion_matrix(y_test, y_pred)[1][1] / (
+                confusion_matrix(y_test, y_pred)[1][1] + confusion_matrix(y_test, y_pred)[0][1])
+    print('Recall: {}%'.format(recall * 100))
+    print('F1: {}%'.format(f1 * 100))
+    print('Precision: {}%'.format(precision * 100))
 
     cm = confusion_matrix(y_test, y_pred)
     fig, ax = plot_confusion_matrix(conf_mat=confusion_matrix(y_test, y_pred), figsize=(6, 6), cmap=plt.cm.Greens)
