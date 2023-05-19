@@ -3,7 +3,7 @@ import pandas as pd
 from mlxtend.plotting import plot_confusion_matrix
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.metrics import confusion_matrix, accuracy_score, recall_score, precision_score, f1_score
 
 CSV_FULL_PATH = '../CSVs/pokemon.csv'
 
@@ -52,18 +52,10 @@ if __name__ == '__main__':
     best_model.fit(x_train, y_train)
     y_pred = best_model.predict(x_test)
     print('Accuracy: {}%'.format(accuracy_score(y_test, y_pred) * 100))
-    recall = confusion_matrix(y_test, y_pred)[1][1] / (
-                confusion_matrix(y_test, y_pred)[1][1] + confusion_matrix(y_test, y_pred)[1][0])
-    f1 = 2 * (recall * accuracy_score(y_test, y_pred)) / (recall + accuracy_score(y_test, y_pred))
-    precision = confusion_matrix(y_test, y_pred)[1][1] / (
-                confusion_matrix(y_test, y_pred)[1][1] + confusion_matrix(y_test, y_pred)[0][1])
-    print('Recall: {}%'.format(recall * 100))
-    print('F1: {}%'.format(f1 * 100))
-    print('Precision: {}%'.format(precision * 100))
+    print('Precision: {}%'.format(precision_score(y_test, y_pred) * 100))
+    print('Recall: {}%'.format(recall_score(y_test, y_pred) * 100))
+    print('F1: {}%'.format(f1_score(y_test, y_pred) * 100))
 
-
-
-    # print table of test accuracy, precision, recall and f1
     print('n_neighbors\t\tTest Accuracy\t\tPrecision\t\tRecall\t\tF1')
     results = pd.DataFrame({'n_neighbors': neighbors_settings, 'Test Accuracy': test_accuracy, 'Precision': precision_list,
                             'Recall': recall_list, 'F1': f1_list})
