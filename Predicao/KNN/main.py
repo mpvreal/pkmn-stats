@@ -3,7 +3,7 @@ import pandas as pd
 from mlxtend.plotting import plot_confusion_matrix
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.metrics import confusion_matrix, accuracy_score, recall_score, precision_score, f1_score
 
 CSV_FULL_PATH = '../CSVs/pokemon.csv'
 
@@ -19,6 +19,10 @@ if __name__ == '__main__':
     training_accuracy = []
     test_accuracy = []
 
+    precision_list = []
+    recall_list = []
+    f1_list = []
+
     neighbors_settings = range(1, 16)
 
     for n_neighbors in neighbors_settings:
@@ -27,6 +31,13 @@ if __name__ == '__main__':
 
         training_accuracy.append(model.score(x_train, y_train))
         test_accuracy.append(model.score(x_test, y_test))
+
+        y_pred = model.predict(x_test)
+        recall_list.append(confusion_matrix(y_test, y_pred)[1][1] / (
+                    confusion_matrix(y_test, y_pred)[1][1] + confusion_matrix(y_test, y_pred)[1][0]))
+        precision_list.append(confusion_matrix(y_test, y_pred)[1][1] / (
+                    confusion_matrix(y_test, y_pred)[1][1] + confusion_matrix(y_test, y_pred)[0][1]))
+        f1_list.append(2 * (precision_list[-1] * recall_list[-1]) / (precision_list[-1] + recall_list[-1]))
 
     fig = plt.figure(figsize=(10, 5))
     plt.plot(neighbors_settings, training_accuracy, label='Training Accuracy')
@@ -41,6 +52,15 @@ if __name__ == '__main__':
     best_model.fit(x_train, y_train)
     y_pred = best_model.predict(x_test)
     print('Accuracy: {}%'.format(accuracy_score(y_test, y_pred) * 100))
+    print('Precision: {}%'.format(precision_score(y_test, y_pred) * 100))
+    print('Recall: {}%'.format(recall_score(y_test, y_pred) * 100))
+    print('F1: {}%'.format(f1_score(y_test, y_pred) * 100))
+
+    print('n_neighbors\t\tTest Accuracy\t\tPrecision\t\tRecall\t\tF1')
+    results = pd.DataFrame({'n_neighbors': neighbors_settings, 'Test Accuracy': test_accuracy, 'Precision': precision_list,
+                            'Recall': recall_list, 'F1': f1_list})
+    results = results.round(2)
+    results.to_csv('results.csv', index=False)
 
     cm = confusion_matrix(y_test, y_pred)
     fig, ax = plot_confusion_matrix(conf_mat=confusion_matrix(y_test, y_pred), figsize=(6, 6), cmap=plt.cm.Greens)
